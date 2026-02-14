@@ -1,5 +1,13 @@
 void main() {
-    IO.println(isPalindrome(2345432));
+    IO.println(singleNumber(new int[]{1,2,3,4,5,1,2,3,4}));
+}
+
+public int singleNumber(int[] nums) {
+    int result = 0;
+    for (int num : nums) {
+        result ^= num; // XOR accumulates the unique number
+    }
+    return result;
 }
 
 public boolean isPalindrome(int x) {
